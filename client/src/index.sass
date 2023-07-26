@@ -1,0 +1,162 @@
+// index.sass
+@keyframes slideInRight 
+  from 
+    transform: translateX(100%)
+  to 
+    transform: translateX(0)
+
+@keyframes slideOutRight 
+  from 
+    transform: translateX(0)
+  to 
+    transform: translateX(100%)
+  
+  
+body
+  font-family: cursive !important
+  background: aliceblue
+
+.header
+  background: #0076b1
+  color: #fff
+  text-align: center
+  padding: 10px
+
+.input-container
+  border: 2px solid black
+  border-radius: 1rem
+
+.react-datepicker-wrapper
+  width: 100%
+
+.search-button
+  width: 120px
+  height: 100%
+  border-radius: 10px
+  background: #0076b1
+  color: #fff
+
+.form-control
+  border: 1px solid black
+
+.top-toast-container
+  position: fixed
+  top: 10%
+  right: 1px
+  width: 20%
+  background-color: green
+  color: #fff
+  padding: 10px
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 9999
+  animation-fill-mode: forwards
+  opacity: 1
+
+  .top-toast-content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    max-width: 600px
+  .close-btn
+    cursor: pointer
+    background: none
+    border: none
+    color: #fff
+    font-size: 18px
+    font-weight: bold
+  
+.modal-overlay
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 9999
+  .modal-dialog
+    background-color: #fff
+    border-radius: 4px
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3)
+    width: 400px
+
+.modal-header
+  padding: 1rem
+  border-bottom: 1px solid #dee2e6
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.modal-title
+  margin: 0
+
+.modal-body
+  padding: 1rem
+
+.close
+  padding: 0
+  background: none
+  border: none
+  cursor: pointer
+.show
+  display: block
+  animation: slideInRight 0.3s ease-in-out
+.hide
+  visibility: hidden
+  animation: slideOutRight 0.3s ease-in-out
+.apexcharts-toolbar
+  display: none !important
+.apexcharts-title-text
+  font-family: cursive !important
+
+
+.loader,
+.loader:after
+  border-radius: 50%
+  width: 5em
+  height: 5em
+
+.loader
+  margin: 15px auto
+  font-size: 10px
+  position: relative
+  text-indent: -9999em
+  opacity: 1
+  border-top: 0.6em solid white
+  border-right: 0.6em solid white
+  border-bottom: 0.6em solid white
+  border-left: 0.6em solid #0076b1
+  transform: translateZ(0)
+  animation: load8 1.2s infinite linear
+
+@keyframes load8
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+.backdrop
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background: black
+  opacity: 0.5
+
+.Load
+  z-index: 10000
+  position: absolute
+  height: 100px
+  width: 100px
+  top: 50%
+  left: 50%
+  opacity: 1
+  margin-left: -50px
+  margin-top: -50px
+  background-size: 100%
