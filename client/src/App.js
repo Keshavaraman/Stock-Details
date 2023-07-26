@@ -4,7 +4,6 @@ import Modal from "./components/modal";
 import Toast from "./components/toast";
 function App() {
 	const stockData=useSelector((data)=>data.stockData);
-	console.log(stockData);
 	return (
 		<>
 		<Modal/>

@@ -1,5 +1,4 @@
 export default function StockInfoContainer({stockInfo}) {
-  console.log(stockInfo)
   function changeDateFormat(inputDate) {
     const dateObj = new Date(inputDate);
     const options = { day: '2-digit', month: 'short', year: 'numeric' };

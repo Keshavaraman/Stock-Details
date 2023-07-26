@@ -12,7 +12,6 @@ const Toast = () => {
 
   useEffect(() => {
     if(modalmessage.messageType=="SUCCESS") { 
-      console.log("TOAST");
       setVisible(true); 
       setMessage(modalmessage.message);
       dispatch({type:RESET_MODAL_MESSAGE});

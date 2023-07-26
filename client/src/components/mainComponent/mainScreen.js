@@ -60,7 +60,6 @@ export default function Main() {
                 selected={selectedDate}
                 maxDate={new Date()}
                 onChange={(e) => {
-                  console.log(e);
                   setSelectedDate(e);
                 }}
                 required

@@ -1,7 +1,6 @@
 import api from "../../helperFunctions/api";
 import { RESET_MODAL_MESSAGE, RESET_STOCK_DATA, UPDATE_MODAL_MESSAGE, UPDATE_STOCK_DATA } from "../constants";
 export function stockDetails(symbol,date) {
-    console.log(process.env.REACT_APP_END_POINT);
     return (async(dispatch)=>{
         const requestParam = {
             url:process.env.REACT_APP_END_POINT+"/api/fetchStockData",
@@ -24,8 +23,6 @@ export function stockDetails(symbol,date) {
         }
         }
         catch(error){
-            console.log(error)
-
             if(error.code == "ERR_NETWORK")
             dispatch({UPDATE_MODAL_MESSAGE,data:{messageType:"ERROR",message:"Network Error!"}});
             if(error.response.status == 400)

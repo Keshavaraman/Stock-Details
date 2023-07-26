@@ -78,7 +78,6 @@ app.post("/api/fetchStockData", async (req, res) => {
       null,
       requestPram.headers
     );
-    console.log(response);
     if (response.status === 200) {
       const data = {
         open:response.data.open,
@@ -90,6 +89,7 @@ app.post("/api/fetchStockData", async (req, res) => {
         date:response.data.from
       };
       cache.set(`${stockSymbol}/${selectedDate}`, data);
+      console.log(`Info : response ${data}`)
       res.status(200).json({results:data});
     } else {
       console.log(`Error : ${JSON.stringify(response)}`);
